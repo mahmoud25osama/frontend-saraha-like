@@ -4,6 +4,9 @@ import { useAuth } from '@/hooks/useAuth'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { FaLock } from 'react-icons/fa'
+import { AiFillThunderbolt } from 'react-icons/ai'
+import { TbTargetArrow } from 'react-icons/tb'
 
 export default function HomePage() {
     const { user, loading } = useAuth()
@@ -42,19 +45,19 @@ export default function HomePage() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-                        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-white">
-                            <div className="text-4xl mb-4">🔒</div>
-                            <h3 className="text-xl font-bold mb-2">
+                        <div className="flex  flex-col items-center bg-white bg-opacity-10 backdrop-blur-lg  rounded-lg p-8 ">
+                            <FaLock className="w-9 h-9 mb-4 text-gray-800 " />
+                            <h3 className="text-xl font-bold mb-2 text-blue-600">
                                 100% Anonymous
                             </h3>
-                            <p className="text-blue-800">
+                            <p className="text-blue-700">
                                 Send messages without revealing your identity
                             </p>
                         </div>
 
-                        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-white">
-                            <div className="text-4xl mb-4">⚡</div>
-                            <h3 className="text-xl font-bold mb-2">
+                        <div className="flex  flex-col items-center bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-white">
+                            <AiFillThunderbolt className="w-10 h-10 mb-4 text-yellow-400 " />
+                            <h3 className="text-xl font-bold mb-2 text-blue-600">
                                 Quick & Easy
                             </h3>
                             <p className="text-blue-800">
@@ -63,9 +66,9 @@ export default function HomePage() {
                             </p>
                         </div>
 
-                        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-white">
-                            <div className="text-4xl mb-4">🎯</div>
-                            <h3 className="text-xl font-bold mb-2">
+                        <div className="flex  flex-col items-center bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-8 text-white">
+                            <TbTargetArrow className="w-10 h-10 mb-4 text-red-500 " />
+                            <h3 className="text-xl font-bold mb-2 text-blue-600">
                                 Share Anywhere
                             </h3>
                             <p className="text-blue-800">
